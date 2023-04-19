@@ -9,7 +9,8 @@ const resolvers = {
     movies(){
         return MovieList
     },
-    movie : (parents,args) => { 
+    movie : (parents, args, context, info) => {
+        console.log(context,parents) 
         const {name} =  args;
         const movie = _.find(MovieList,{name:name});
         return movie;      
@@ -28,6 +29,7 @@ const resolvers = {
  },
 
  // MUTATION STARTS FROM HERE
+
   Mutation: {
     createUser : (parents,args) => {
         const user = args.input;
@@ -36,7 +38,7 @@ const resolvers = {
         userList.push(user);
         return user
     },
-    updateUsername: (parents,args) => {
+    updateUsername : (parents,args) => {
         const {id, newUsername} = args.input;
         let userUpdated;
         userList.forEach((user)=>{
@@ -47,7 +49,7 @@ const resolvers = {
         });
         return userUpdated;
     },
-    deleteUser:(parents, args) => {
+    deleteUser : (parents, args) => {
         const id = args.id;
         _.remove(userList,(user) => user.id === Number(id))
         return null
