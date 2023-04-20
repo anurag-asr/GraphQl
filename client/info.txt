@@ -1,0 +1,151 @@
+# Write your query or mutation here
+# query GetAllUsers {
+#   users {
+#   ...GetUser
+#   }
+# }
+# //How To Use Fragments:
+# fragment GetUser on User{
+#   name
+#   age
+  
+# }
+
+# query getUser{
+#  getCurrentUser{
+#   id
+#   name
+# }
+# }
+
+# query Country{
+#   countries{
+#     data{
+#       id
+#       countryCode
+#     }
+#   }
+# }
+
+# query Lan{
+#   languages{
+#     data{
+#       id
+#       languageCode 
+#       englishName
+#     },
+#     count
+#   }
+# }
+
+# query GetCollections{
+#   getCollection{
+#     name
+#   }
+# }
+
+# query GetCurrentUser{
+#   getCurrentUser{
+#     id
+#     email
+#   }
+# }
+
+# query listRe{
+#  listRecommended{
+#   count
+# }
+# }
+
+# query languages{}
+
+# query GetWatch{
+#   getWatchListTv{
+#     id
+#     accountId
+#   }
+# }
+
+# mutation Forget{
+#   forgetPassword(){
+    
+#   }
+# }
+
+# mutation UpdateName($input: UpdateUserNameInput){
+#   updateUsername(input: $input) {
+#     id
+#     username
+#   }
+# }
+
+# mutation emailPasswordLogIn($data:EmailPasswordLogInData!){
+#   emailPasswordLogIn(data:$data){
+#     message
+#     data{
+#       token
+#     }
+#   }
+# }
+
+# mutation LoginPassworsd($data:EmailPasswordLogInData!){
+#  emailPasswordLogIn(data:$data){
+#   message
+#   data{
+#     token
+#     refreshToken
+#     user{
+#       id
+#       email
+#     }
+#   }
+# }
+# }
+
+# mutation LoginWithToken($data:EmailPasswordLogInData!){
+#   emailPasswordLogIn(data:$data){
+#     message
+#     data{
+#       token
+#       refreshToken
+#     }
+#   }
+# }
+
+mutation loginKaro($data:EmailPasswordLogInData!){
+  emailPasswordLogIn(data:$data){
+    message
+    data{
+      token
+      refreshToken
+    }
+  }
+}
+
+# mutation LoginCheckOtp($email:String!){
+#   sendLoginOtp(email:$email){
+#     message
+#     data{
+#       otp
+#     }
+#   }
+# }
+
+
+# query GetSingleMovieByName($name: String!) {
+#   movie(name: $name) {
+#   name
+#   yearOfPublications
+#   }
+# }
+
+# query GetUser($id:ID!){
+#  getCollection(id:$id){
+#   name
+#   overview
+#   parts{
+#     budget
+#     homePage
+#   }
+# }
+# }
