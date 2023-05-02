@@ -1,0 +1,42 @@
+.App{
+  width:80vw;
+  margin: auto;
+}
+
+.AppHeader{
+  height: 50px;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  border-bottom: 1px grey solid;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .otherInfo_div{
+  display: flex;
+  align-items: center;
+  width: 50vw;
+} */
+
+.otherInfo{
+  display: flex;
+}
+.otherInfo li{
+  list-style: none;
+  margin-left: 15px;
+}
+
+.otherInfo a{
+  text-decoration: none;
+  color: rgba(16, 15, 15, 0.67);
+  font-size: 15px;
+}
+
+.otherInfo a:hover{
+  color: aqua;
+  transition: color 0.3s linear;
+}
+.otherInfo li:active{
+  color: aqua;
+}
