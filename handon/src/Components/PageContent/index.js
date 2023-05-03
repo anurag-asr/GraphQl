@@ -1,10 +1,11 @@
 
 import React from 'react'
+import AllRoutes from '../AllRoutes'
 
 const PageContent = () => {
   return (
-    <div>
-      PageContent
+    <div className='PageContent'>
+      <AllRoutes/>
     </div>
   )
 }

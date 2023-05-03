@@ -3,6 +3,7 @@
   margin: auto;
 }
 
+/* NAVBAR */
 .AppHeader{
   height: 50px;
   width: 80vw;
@@ -12,12 +13,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
-/* .otherInfo_div{
-  display: flex;
-  align-items: center;
-  width: 50vw;
-} */
 
 .otherInfo{
   display: flex;
@@ -39,4 +34,45 @@
 }
 .otherInfo li:active{
   color: aqua;
+}
+.home_icon{
+  margin-right: 2px;
+  font-size: 14px;
+}
+  
+.login_page{
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+/* PageContent */
+.PageContent{
+  margin-top: 20px;
+  min-height: 80vh;
+  background-color: rgb(222, 254, 254);
+}
+.home_page{
+  padding: 10px;
+}
+.home_page_row{
+  margin-top: 20px;
+}
+.login_page_form_div{
+  position: relative;
+  top: 25vh;
+}
+.persona_page{
+  padding: 10px;
+}
+
+
+/* APP-FOOTER */
+.AppFooter{
+  margin-top: 20px;
+  background-color: aliceblue;
+  height: 50px;
+  /* align-items: center;
+  justify-content: center; */
 }
